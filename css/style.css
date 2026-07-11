@@ -1,0 +1,297 @@
+/* =========================================
+   ESTILOS GENERALES - BENGRID SOLUTIONS (DARK THEME)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A192F; /* Azul oscuro profundo */
+    color: #CCD6F6; /* Texto claro para fácil lectura */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #E6F1FF; /* Blanco brillante para los títulos */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   CABECERA CORREGIDA (DELGADA Y ELEGANTE)
+   ========================================= */
+header {
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 8px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #233554;
+    height: 65px; 
+}
+
+.logo a img {
+    display: block;
+    height: 45px; 
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem; 
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00E5FF; /* Cian brillante del logo */
+}
+
+/* =========================================
+   SECCIÓN HERO (PORTADA CON IMAGEN)
+   ========================================= */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom: 1px solid #233554;
+    overflow: hidden;
+    background-color: #0A192F;
+}
+
+.hero img.fondo-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25; /* Oscurece la imagen para que se vea azulada */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #E6F1FF;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #CCD6F6;
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #00E5FF;
+    border: 2px solid #00E5FF;
+    padding: 12px 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    background-color: rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+/* =========================================
+   GRILLA DE SERVICIOS (TARJETAS)
+   ========================================= */
+.seccion-padding {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-padding h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #112240;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #233554;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00E5FF;
+    box-shadow: 0 10px 30px -15px rgba(0, 229, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.card:hover img {
+    opacity: 1;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* =========================================
+   SECCIÓN DE CONTACTO CON BANNER
+   ========================================= */
+.banner-contacto {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #233554;
+}
+
+.banner-contacto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; /* Para que encaje con el tono oscuro */
+}
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #112240;
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid #233554;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-top: -80px; /* Hace que el cuadro suba y se superponga a la imagen */
+    position: relative;
+    z-index: 10;
+}
+
+.contacto-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacto-info h3 {
+    font-size: 2rem;
+    color: #00E5FF;
+    margin-bottom: 25px;
+}
+
+.contacto-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-info strong {
+    color: #E6F1FF;
+    margin-right: 10px;
+}
+
+.contacto-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-form input, .contacto-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #233554;
+    background: #0A192F;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.contacto-form input:focus, .contacto-form textarea:focus {
+    outline: none;
+    border-color: #00E5FF;
+}
+
+/* =========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #020C1B;
+    color: #8892B0;
+    border-top: 1px solid #233554;
+    margin-top: 40px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Celulares)
+   ========================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+    nav ul {
+        margin-top: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .contacto-container {
+        padding: 30px 20px;
+        margin-top: -40px;
+    }
+}
